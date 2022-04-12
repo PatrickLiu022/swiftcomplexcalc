@@ -83,6 +83,10 @@ class Calculator {
     public func add(lhs : [String : Int], rhs : [String : Int]) -> [String : Int] {
         return ["x": lhs["x"]! + rhs["x"]!, "y": lhs["y"]! + rhs["y"]!]
     }
+    
+    public func subtract(lhs : [String : Int], rhs : [String : Int]) -> [String : Int] {
+        return ["x": lhs["x"]! - rhs["x"]!, "y": lhs["y"]! - rhs["y"]!]
+    }
 }
 
 let calc = Calculator()  // Don't change this declaration name; it's used in all the tests below
@@ -127,4 +131,4 @@ calc.add(lhs: p3, rhs: p4) == (-4, 4)
 let pd1 = ["x": 5, "y": 5]
 let pd2 = ["x": -4, "y": 4]
 calc.add(lhs: pd1, rhs: pd2) == ["x": 1, "y": 9]
-//calc.subtract(lhs: pd1, rhs: pd2) == ["x": 9, "y": 1]
+calc.subtract(lhs: pd1, rhs: pd2) == ["x": 9, "y": 1]
