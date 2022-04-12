@@ -116,9 +116,9 @@ let p2 = (12, -27)
 let p3 = (-4, 4)
 let p4 = (0, 0)
 calc.add(lhs: p1, rhs: p2) == (17, -22)
-//calc.subtract(lhs: p1, rhs: p2) == (-7, 32)
-//calc.add(lhs: p4, rhs: p4) == (0, 0)
-//calc.add(lhs: p3, rhs: p4) == (-4, 4)
+calc.subtract(lhs: p1, rhs: p2) == (-7, 32)
+calc.add(lhs: p4, rhs: p4) == (0, 0)
+calc.add(lhs: p3, rhs: p4) == (-4, 4)
 //
 //let pd1 = ["x": 5, "y": 5]
 //let pd2 = ["x": -4, "y": 4]
