@@ -79,6 +79,10 @@ class Calculator {
     public func divide(lhs : (Int, Int), rhs : (Int, Int)) -> (Int, Int) {
         return (lhs.0 / rhs.0, lhs.1 / rhs.1)
     }
+    
+    public func add(lhs : [String : Int], rhs : [String : Int]) -> [String : Int] {
+        return ["x": lhs["x"]! + rhs["x"]!, "y": lhs["y"]! + rhs["y"]!]
+    }
 }
 
 let calc = Calculator()  // Don't change this declaration name; it's used in all the tests below
@@ -119,8 +123,8 @@ calc.add(lhs: p1, rhs: p2) == (17, -22)
 calc.subtract(lhs: p1, rhs: p2) == (-7, 32)
 calc.add(lhs: p4, rhs: p4) == (0, 0)
 calc.add(lhs: p3, rhs: p4) == (-4, 4)
-//
-//let pd1 = ["x": 5, "y": 5]
-//let pd2 = ["x": -4, "y": 4]
-//calc.add(lhs: pd1, rhs: pd2) == ["x": 1, "y": 9]
+
+let pd1 = ["x": 5, "y": 5]
+let pd2 = ["x": -4, "y": 4]
+calc.add(lhs: pd1, rhs: pd2) == ["x": 1, "y": 9]
 //calc.subtract(lhs: pd1, rhs: pd2) == ["x": 9, "y": 1]
